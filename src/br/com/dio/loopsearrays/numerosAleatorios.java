@@ -6,7 +6,7 @@ package br.com.dio.loopsearrays;
 
 import java.util.Random;
 
-public class numerosAleatórios {
+public class numerosAleatorios {
     public static void main(String[] args) {
         Random random = new Random();
 
