@@ -3,12 +3,12 @@ package br.com.dio.Fila;
 public class Main {
     public static void main(String[] args) {
 
-       Fila minhaFila =new Fila();
+       Fila<String> minhaFila =new Fila<>();
 
-        minhaFila.enqueue(new NoFila("Primeiro"));
-        minhaFila.enqueue(new NoFila("Segundo"));
-        minhaFila.enqueue(new NoFila("Terceiro"));
-        minhaFila.enqueue(new NoFila("Quarto"));
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
         System.out.println(minhaFila);
 
         System.out.println("---Chamando Primeira da Fila!");
