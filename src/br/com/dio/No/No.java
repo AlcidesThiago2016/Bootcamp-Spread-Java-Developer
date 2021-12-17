@@ -1,5 +1,5 @@
 package br.com.dio.No;
-
+//Implementação Generics
 public class No<T> {
 
     private T conteudo;
