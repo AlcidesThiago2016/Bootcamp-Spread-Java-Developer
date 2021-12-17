@@ -15,6 +15,7 @@ public class Main {
         no3.setProximoNo(no4);//NÓ 3 APONTANDO PARA O NÓ 4
         //QUANDO ACABA OS APONTAMENTOS O ULTIMO NÓ APONTA PARA NULL
 
+        System.out.println("-----------------------");
         System.out.println(no1);
         System.out.println(no1.getProximoNo());
 
