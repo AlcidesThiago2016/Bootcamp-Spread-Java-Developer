@@ -1,5 +1,7 @@
 package br.com.dio.Fila;
 
+import br.com.dio.No.No;
+
 public class Fila {
 
     private NoFila refNoEntradaFila;
@@ -8,12 +10,13 @@ public class Fila {
         this.refNoEntradaFila = null;
     }
 
-    public void enqueue(NoFila novoNo){
+    public void enqueue(Object obj){
+        NoFila novoNo = new NoFila(obj);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila= novoNo;
     }
 
-    public NoFila first(){
+    public Object first(){
         if (!this.isEmpty()){
             NoFila primeiroNo = refNoEntradaFila;
             while (true){
@@ -23,11 +26,12 @@ public class Fila {
                     break;
                 }
             }
+            return primeiroNo.getObject();
         }
         return null;
     }
 
-    public NoFila dequeue(){
+    public Object dequeue(){
         if (!this.isEmpty()){
             NoFila primeiroNo = refNoEntradaFila;
             NoFila noAuxiliar = refNoEntradaFila;
@@ -40,7 +44,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObject();
         }
         return null;
     }
