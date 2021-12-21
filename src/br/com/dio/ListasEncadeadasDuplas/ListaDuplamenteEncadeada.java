@@ -26,7 +26,7 @@ public class ListaDuplamenteEncadeada<T> {
     }
 
     public int size(){
-        return tamanhoLista;
+        return this.tamanhoLista;
     }
 
 }
