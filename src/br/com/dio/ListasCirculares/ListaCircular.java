@@ -28,7 +28,7 @@ public class ListaCircular<T> {
     public boolean isEmpty(){
         return this.tamanhoLista == 0 ? true : false;
     }
-
+   //Tamanho
     public int size(){
         return this.tamanhoLista;
     }
