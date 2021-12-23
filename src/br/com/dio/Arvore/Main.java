@@ -1,0 +1,23 @@
+package br.com.dio.Arvore;
+
+import br.com.dio.Arvore.model.Obj;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
+
+        minhaArvore.inserir(new Obj(13));
+        minhaArvore.inserir(new Obj(10));
+        minhaArvore.inserir(new Obj(15));
+        minhaArvore.inserir(new Obj(2));
+        minhaArvore.inserir(new Obj(12));
+        minhaArvore.inserir(new Obj(20));
+        minhaArvore.inserir(new Obj(31));
+        minhaArvore.inserir(new Obj(29));
+
+        minhaArvore.exibirInOrdem();
+        minhaArvore.exibirPreOrdem();
+        minhaArvore.exibirPosOrdem();
+    }
+}
