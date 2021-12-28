@@ -43,5 +43,35 @@ public class ExemploMap {
                 System.out.println("Modelo mais eficiente: " + modeloMaisEficiente + " - " + consumoMaisEficiente);
             }
         }
+
+        System.out.println("Exibindo os modelo menos economicos e seu consumo: ");
+
+        Double consumoMenosEficiente = Collections.min(carrosPopulares.values());
+        String modeloMenosEficiente = "";
+        for (Map.Entry<String, Double> entry: carrosPopulares.entrySet()) {
+            if (entry.getValue().equals(consumoMenosEficiente)) {
+                modeloMenosEficiente = entry.getKey();
+                System.out.println("Modelo menos eficiente: " + modeloMenosEficiente + " - " + consumoMenosEficiente);
+            }
+        }
+
+        System.out.println("Exibindo a soma dos consumos: ");
+        Iterator<Double> iterator = carrosPopulares.values().iterator();
+        Double soma = 0d;
+        while (iterator.hasNext()){
+            soma += iterator.next();
+        }
+        System.out.println("A soma dos consumos é: " + soma);
+
+        System.out.println("Exibindo a média de consumo dos carros: " + (soma/carrosPopulares.size()));
+
+        System.out.println("Removendo os veiculos com média igual a 15,6 km/l: ");
+        Iterator<Double> iterator1 = carrosPopulares.values().iterator();
+        while (iterator1.hasNext()){
+            if (iterator1.next().equals(15.6)) iterator1.remove();
+        }
+        System.out.println(carrosPopulares);
+
+
     }
 }
